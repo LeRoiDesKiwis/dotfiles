@@ -10,5 +10,6 @@ PROMPT='%F{yellow}$USER%f in %F{yellow}%~%f >~> '
 
 alias i3config='vim ~/.config/i3/config'
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias next-wp="variety -n"
 
 # End of lines configured by zsh-newuser-install
