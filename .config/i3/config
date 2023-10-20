@@ -218,6 +218,8 @@ bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t ima
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
+bindsym Ctrl+Shift+l exec --no-startup-id i3lock
+
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
 
 # Start i3bar to display a workspace bar (plus the system information i3status
