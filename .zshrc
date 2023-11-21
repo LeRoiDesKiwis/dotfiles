@@ -1,5 +1,11 @@
 # Lines configured by zsh-newuser-install
 
+echo "\t\t╭------------------------------------------╮"
+echo "\t\t|\t   WELCOME TO KITTY UWU\t\t   |"
+echo "\t\t|\tDon't forget that vim > all :3\t   |"
+echo "\t\t╰------------------------------------------╯"
+echo
+
 source ~/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 autoload -Uz vcs_info
