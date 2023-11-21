@@ -196,9 +196,13 @@ smart_gaps on
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
+bindsym Ctrl+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+bindsym Ctrl+XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id brightnessctl set +1%
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 1%-
+
 workspace_auto_back_and_forth yes
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+o exec --so-startup-id /home/leroideskiwis/Documents/Obsidian.AppImage
 
 exec --no-startup-id picom -CGb
@@ -221,6 +225,20 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym Ctrl+Shift+l exec --no-startup-id i3lock
 
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
+
+exec --no-startup-id feh --bg-fill --randomize $HOME/Dropbox/wallpapers/*
+bindsym $mod+Ctrl+Shift+w exec --no-startup-id feh --bg-fill --randomize $HOME/Dropbox/wallpapers/*
+
+exec --no-startup-id xinput set-prop "DELL0A20:00 0488:101A Touchpad" "libinput Tapping Enabled" 1
+
+bindsym Ctrl+$mod+l exec --no-startup-id i3lock
+bindsym Ctrl+$mod+s exec --no-startup-id sh $HOME/connect_screen.sh
+bindsym Ctrl+Shift+$mod+s exec --no-startup-id xrandr --auto
+bindsym Ctrl+Shift+$mod+x exec --no-startup-id xrandr --output HDMI-1 --auto --left-of eDP-1
+
+bindsym Ctrl+Shift+$mod+c exec flatpak run com.cryptomator.Cryptomator
+
+# bindsym Alt+$mod+c exec --no-startup-id flatpak run org.cryptomator.Cryptomator
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
