@@ -28,6 +28,11 @@ function reload(){
 	pkill $1 && $1 &
 }
 
+function wlp(){
+	feh --bg-fill $1
+
+}
+
 # End of lines configured by zsh-newuser-install
 
 autoload -Uz compinit
