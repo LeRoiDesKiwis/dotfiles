@@ -187,10 +187,11 @@ bindsym $mod+p exec rofi -show drun
 
 # Gaps
 gaps inner 6px
+gaps outer 8px
 # gaps horizontal 0px
 # gaps vertical 0px
 
-smart_gaps on
+smart_gaps off
 
 # Brighness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%

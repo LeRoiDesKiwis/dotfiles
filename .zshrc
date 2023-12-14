@@ -35,11 +35,13 @@ welcome_size=60
 echo
 echo
 echo_center "╭───────────────────────────────────────────────────────────╮"
-center "" $welcome_size| display_center
+center "=~uwu~=" $welcome_size| display_center
 center "WELCOME TO KITTY UWU" $welcome_size | display_center
 center "Don't forget that vim > all :3" $welcome_size | display_center
+center "=~uwu~=" $welcome_size | display_center
+echo_center "├───────────────────────────────────────────────────────────┤"
 center "(this computer belongs to LeRoiDesKiwis/Antony)" $welcome_size | display_center
-center "" $welcome_size | display_center
+#center "Idol (YOASOBI) is the best music ever" $welcome_size | display_center
 echo_center "╰───────────────────────────────────────────────────────────╯"
 echo
 echo
@@ -62,6 +64,7 @@ alias next-wp="variety -n"
 alias wifi1="nmcli"
 alias reloadz="source ~/.zshrc && echo 'zshrc reloaded !'"
 alias wifico="nmcli d w c"
+alias reloadpicom="pkill picom&& ((picom 2> /dev/null) &)"
 
 function cdls() {
     cd $1 && ls
@@ -80,7 +83,9 @@ function wlp(){
 
 }
 
-function cdmkdir(){
+alias wlp-megumin="wlp /home/leroideskiwis/Dropbox/wallpapers/megumin.png"
+
+function mkdircd(){
 	mkdir $1 && cd $1
 }
 
