@@ -71,6 +71,7 @@ alias wifi1="nmcli"
 alias reloadz="source ~/.zshrc && echo 'zshrc reloaded !'"
 alias wifico="nmcli d w c"
 alias reloadpicom="pkill picom&& ((picom 2> /dev/null) &)"
+alias ls="ls --color"
 
 function cdls() {
     cd $1 && ls
