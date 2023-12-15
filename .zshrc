@@ -4,6 +4,8 @@ if [ -z "$DISPLAY" ] && [ $XDG_VTNR = 1 ]; then
 	exec startx
 fi
 
+export GPG_TTY=($tty)
+
 vbar="│"
 
 function echo_center(){
