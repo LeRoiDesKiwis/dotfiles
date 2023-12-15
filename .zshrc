@@ -1,5 +1,9 @@
 # Lines configured by zsh-newuser-install
 
+if [ -z "$DISPLAY" ] && [ $XDG_VTNR = 1 ]; then
+	exec startx
+fi
+
 vbar="│"
 
 function echo_center(){
@@ -59,7 +63,7 @@ PROMPT='%F{yellow}$USER%f in %F{yellow}%~%f >~> '
 
 #===== ALIASES & FUNCTIONS ======
 alias i3config='vim ~/.config/i3/config'
-alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias config="git --git-dir=$HOME/.cfg --work-tree=$HOME"
 alias next-wp="variety -n"
 alias wifi1="nmcli"
 alias reloadz="source ~/.zshrc && echo 'zshrc reloaded !'"
